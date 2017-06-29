@@ -1,29 +1,30 @@
 require.config({
-  baseUrl : "js",
+  shim: {
+      'bmap_api': {
+          deps: ['jquery'],
+          exports: 'bmap_api'
+      }
+  },
+  baseUrl: "js",
   paths : {
+    // 注意这里别写错了
+    async: "requirejs/async",
+    json: "requirejs/json",
+    text: "requirejs/text",
     jquery : "https://cdn.bootcss.com/jquery/3.2.1/jquery.min",
-    echarts : "https://cdn.bootcss.com/echarts/3.6.2/echarts.min",
+    echarts : "echarts/echarts.min",
+    bmap: "https://cdn.bootcss.com/echarts/3.6.2/extension/bmap.min",
+    bmap_api: "http://api.map.baidu.com/api?v=2.0&ak=cvENTqYHfb5sLjXMQ4yWHKIPmx38ACs3",
     map_sh: "map/shanghai",
     map_china: "map/china",
+    app: "app/app"
   },
     waitSeconds: 10
 
 });
 
-require([ 'jquery', 'echarts', 'map_china'], function($, echarts, map_china) {
+require(["app"], function(app) {
 
-  console.log("Hello here")
-
-  $(document).ready(function(){
-
-    var chart = echarts.init(document.getElementById('mapChart'));
-    var option = {
-            geo: {
-                  map: 'china'
-              }
-          }
-    chart.setOption(option);
-    console.log("Load Finished here");
-  });
+  app.run();
 
 });

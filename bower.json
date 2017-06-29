@@ -1,0 +1,22 @@
+{
+  "name": "lianjia-analysis",
+  "homepage": "https://github.com/lxyangfan/lianjia-analysis",
+  "authors": [
+    "fr4nk.yang <fr4nk.yang@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs-plugins": "^1.0.3",
+    "requirejs": "^2.3.3",
+    "echarts": "^3.6.2"
+  }
+}
