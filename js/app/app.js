@@ -171,7 +171,7 @@ define(['jquery', 'echarts', 'bmap',
                                 return param.name + '' + Math.round(param.data.value[2] * 100) / 100 + '万';
                             },
                             position: 'top',
-                            show: false
+                            show: true
                         }
                     },
                     itemStyle: {
