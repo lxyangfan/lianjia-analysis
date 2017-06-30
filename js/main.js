@@ -19,7 +19,7 @@ require.config({
         map_china: "map/china",
         app: "app/app"
     },
-    waitSeconds: 10
+    waitSeconds: 60
 
 });
 
