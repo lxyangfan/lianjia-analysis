@@ -25,6 +25,6 @@ require.config({
 
 require(["app"], function(app) {
 
-    app.run();
+    app.show_preowned_sales_map();
 
 });
